@@ -1,0 +1,74 @@
+class Main
+{
+  public static void main(String[] args)
+  {
+      Movie movie1 = new Movie("Jaws", 130, "Horror");
+      movie1.print();
+      
+      Movie movie2 = new Movie("Men In Black: International", 115, "Comedy");
+      movie2.print();
+
+      Movie movie3 = new Movie("Project Power", 114, "Fantasy");
+      movie3.print();
+
+      Movie movie4 = new Movie("Parasite", 132, "Thriller");
+      movie4.print();
+
+
+  }
+}
+
+public class Movie
+{
+  //Attributes
+  private String name;
+  private int movieLength;
+  private String genre;
+
+  public Movie()
+  {
+
+  }
+
+  //Parameterized constructor
+  public Movie(String n, int l, String gen)
+  {
+    name = n;
+    movieLength = l;
+    genre = gen;
+  }
+
+  //overloading constructor
+  public Movie(String n, int l)
+  {
+    name = n;
+    movieLength = l;
+  }
+
+  //Getter methods or accessor methods
+  public String getName()
+  {
+    return name;
+  }
+  
+  public int getLength()
+  {
+    return movieLength;
+  }
+
+  public String getGenre()
+  {
+    return genre;
+  }
+
+  //Setter methods
+  public void setName(String n)
+  {
+    name = n;
+  }
+
+  public void print()
+  {
+    System.out.println("Movie name: " + getName() + " ," + " Length of movie: " + getLength() + " min" + " ," + " Genre: " + getGenre());
+  }
+}
